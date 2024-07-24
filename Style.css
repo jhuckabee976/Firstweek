@@ -1,0 +1,26 @@
+section{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    border-style: solid;
+    background-color:rgba(39, 245, 90, 0.512);
+}
+body{
+    text-align: center;
+    background-color: rgb(30, 255, 251);
+}
+ul{
+    display: inline;
+    text-align: center;
+    align-items: center;
+    margin-right: 30px;
+}
+.facts{
+    display: flex;
+    margin-bottom: 20px;
+}
+img{
+    max-height: 250px;
+    margin-top: 20px;
+}
