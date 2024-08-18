@@ -1,26 +1,123 @@
-section{
-    display: flex;
+
+   { box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+
+/* Custom Properties */
+:root {
+    --main-bg: #39f590;
+    --top-menu-bg: #0e9aa7;
+    --sub-menu-bg: #3da4ab;
+    --text-color: white;
+}
+
+/* Body and global styles */
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 3rem auto;
+    color: var(--text-color);
     text-align: center;
+    background-color: #f0f0f0; /* Default background color */
+}
+
+/* Header section for 'Jason' */
+header {
+    background-image: url('./images/CC567D7C-FDE7-4EBF-886D-3C35A1880F05_1_105_c.jpeg'); /* Image for "Jason" section */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 10px;
+    height: 100px; /* Adjust this value to increase or decrease the box size */
+}
+
+/* Sub-menu styles (e.g., "He/Him", "Greensboro, NC") */
+#sub-menu {
+    width: 100%;
+    z-index: 10;
+    transition: top 0.5s ease-out;
+}
+
+/* Dropdown content style for "Facts about me" and "Questions" */
+#facts-content {
+    background-image: url('./images/Vanilla\ ice\ cream\ pexels-catscoming-4594750.jpg'); /* Image for "Facts about me" section */
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 20px;
+    background-color: #f0f0f0; /* Default background color */
+}
+
+#questions-content {
+    background-image: url('./images/Bali\ pexels-timrael-2474689.jpg'); /* Image for "Questions" section */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    background-color: #f0f0f0; /* Default background color */
+}
+
+/* Dropdown content general styles */
+.dropdown-content {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color); /* Ensure text is readable */
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    width: 60%; /* Adjust width to align with other elements */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Dropdown header hover effect */
+.dropdown-header:hover {
+    color: black;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Flexbox utility classes */
+.flex-ctr {
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.flex-around {
+    display: flex;
     justify-content: space-around;
-    border-style: solid;
-    background-color:rgba(39, 245, 90, 0.512);
-}
-body{
-    text-align: center;
-    background-color: rgb(30, 255, 251);
-}
-ul{
-    display: inline;
-    text-align: center;
     align-items: center;
-    margin-right: 30px;
 }
-.facts{
-    display: flex;
-    margin-bottom: 20px;
+
+/* Navigation links style */
+nav a {
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(black);
+    margin-right: 20px;
 }
-img{
-    max-height: 250px;
-    margin-top: 20px;
+
+nav a.active {
+    background-color: var(--sub-menu-bg);
+    color: var(black);
 }
+
+/* Circle color mouse click effect */
+div.mouseCircle {
+    transition: background-color 0.5s ease;
+    z-index: 9999; 
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: #000;
+}
+ 
